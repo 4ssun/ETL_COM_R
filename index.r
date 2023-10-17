@@ -6,10 +6,7 @@ library(readxl)
 library(tidyr)
 setwd("C:\\Users\\4na4Sun\\3D Objects\\ETlcomR\\")
 base_vitamina <- read_excel("Base_vitamina_D.xlsx")
-
-
 # Renomeando as colunas para Português, ja que a base está em espanhol. Todas as colunas que possuírem no final do nome B: Atrela um valor qualitativo e os que possuem Cod: Atrela um valor quantitativo. Afim de facilitar a interpretação desses dados pela associação numérica e qualificativa para leitura dos resultados.
-
 base_vitamina_clean <- rename(base_vitamina,
     Nome_participante = "Iniciales del nombre y apellido del participante",
     Idade = "Edad(en años cumplidos)", ,
@@ -17,8 +14,8 @@ base_vitamina_clean <- rename(base_vitamina,
     Municipio_de_residencia = "Municipio de nacimiento",
     Nivel_Socioeconomico_cod = "Estrato socioeconómico",
     Nivel_Socioeconomico_B = "Estrato_B",
-    Atividades_baixa_exposicao = "Oficio u ocupación relacionado con baja o normal exposición al sol", # nolint: line_length_linter.
-    Atividades_alta_exposicao = "Oficio u ocupación relacionado con alta exposición al sol", # nolint: line_length_linter.
+    Atividades_baixa_exposicao = "Oficio u ocupación relacionado con baja o normal exposición al sol",
+    Atividades_alta_exposicao = "Oficio u ocupación relacionado con alta exposición al sol",
     Grupo_de_estudo = "Grupo de estudio",
     Nivel_serico = "Valor sérico VD",
     Valor_serico_B = "Valor_Sérico_B",
